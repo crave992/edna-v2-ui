@@ -1,0 +1,70 @@
+import CountryDto from "./CountryDto";
+import StateDto from "./StateDto";
+
+export default interface UserContactDto {
+  createdBy: string;
+  createdOn: string;
+  email: string;
+  firstName: string;
+  hasAccount: boolean;
+  id: number;
+  lastName: string;
+  licenseIdPhoto: string;
+  licenseNumber?: string;
+  middleName: string;
+  phone?: string | null;
+  profilePhoto?: string;
+  profileImage: FileList | null;
+  licenseImage: FileList | null;
+  role?: string;
+  staffId?: number;
+  studentId?: null;
+  sendProfileOnboardingEmail: boolean;
+  croppedProfileImage?: string;
+  croppedLicenseImage?: string;
+  contact?: UserContactDto;
+  parentId?: number;
+  addressLine1?: string | null;
+  addressLine2?: string | null;
+  countryId?: number | null;
+  country?: CountryDto | null;
+  stateId?: number | null;
+  state?: StateDto | null;
+  city?: string | null;
+  zipcode?: string | null;
+}
+
+export interface UpdateUserContactDto {
+  contact?: UserContactDto;
+  childAccountAccess: number;
+  contactPosition: number;
+  createdBy: string;
+  createdOn: string;
+  email: string;
+  firstName: string;
+  hasAccount: boolean;
+  id: number;
+  lastName: string;
+  licenseIdPhoto: string;
+  licenseNumber: string;
+  middleName: string;
+  phone?: string | null;
+  pickupAuthorization: boolean;
+  profilePhoto?: string;
+  profileImage: FileList | null;
+  licenseImage: FileList | null;
+  relationship: string;
+  role: string;
+  staffId?: number;
+  studentId?: null;
+  sendProfileOnboardingEmail: boolean;
+  isEmergencyContact: boolean;
+  addressLine1?: string | null;
+  addressLine2?: string | null;
+  countryId?: number | null;
+  country?: CountryDto | null;
+  stateId?: number | null;
+  state?: StateDto | null;
+  city?: string | null;
+  zipcode?: string | null;
+}
